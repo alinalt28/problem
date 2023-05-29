@@ -15,7 +15,8 @@ class Model1 (models.Model):
 class Model2 (models.Model):
     pole1 = models.IntegerField()
     pole2 = models.CharField(max_length=45)
-    pole4 = models.ManyToManyField (Model1)
+    pole5 = models.ForeignKey(Model1, models.CASCADE)
+    pole6 = models.ManyToManyField(Model1)
 
     class Meta:
         verbose_name = "модель"
